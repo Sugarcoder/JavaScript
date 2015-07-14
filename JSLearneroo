@@ -1,0 +1,52 @@
+// objects can contain functions. 
+
+var myObj = {
+	myFunc: function(){
+		return "Hello, world!";
+	}
+};
+myObj.myFunc();
+
+
+
+
+// Functions can access the object they are attached to, using the "this" keyword. 
+
+myObj = {
+	myString = "Hello, world!",
+	myFunc: function(){
+		return this.myString;
+	}
+};
+
+
+
+
+// Our function doesn't work if it isn't called in the context of the object. 
+
+var myFunc = myObj.myFunc;
+myFunc();
+
+
+// A function can be assigned to the object and gain access to it through 'this'.
+
+var myOtherFunc = function() {
+	return this.myString.toUpperCase();
+}
+
+myObj.myOtherFunc = myOtherFunc;
+myObj.myOtherFunc();
+
+
+
+
+// Constructors are functions designed to create objects. This is done by calling the function with the 'new' keyword. Constructors use the 'this' keyword to set properties of the object. 
+
+var MyConstructor = function(){
+	this.myNumber = 5;
+}
+
+myNewObj = new MyConstructor();
+myNewObj.myNumber;
+
+
