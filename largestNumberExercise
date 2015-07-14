@@ -1,0 +1,11 @@
+var array = ['123-456-7777', '963-481-7945', '111-222-3333'];
+
+var largest_phone_number = '963-481-7945';
+
+for (i=0; i<=largest_phone_number;i++){
+    if (array[i]>largest) {
+        var largest_phone_number=array[i];
+    }
+}
+
+console.log(largest_phone_number);
