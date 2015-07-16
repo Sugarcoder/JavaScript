@@ -5,3 +5,28 @@ var divideByThree = function (number) {
     console.log(val);
 };
 
+divideByThree(6);
+
+
+
+
+var foodDemand(food) {
+	console.log("I want to eat" + " " + food);
+}
+
+food("cupcakes");
+
+
+
+// Parameter is a number, and we do math with that parameter.
+
+var timesTwo = function(number) {
+    return number * 2;
+};
+
+
+var newNumber = timesTwo(8);
+console.log(newNumber);
+
+
+
