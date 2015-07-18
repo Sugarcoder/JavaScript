@@ -47,6 +47,23 @@ if (quarter(12) % 3 === 0 ) {
 
 
 
+--------More than one parameters--------
+
+
+var areaBox = function(length, width) {
+    return length * width;
+}
+
+
+
+var perimeterBox = function(length, width) {
+    return length + length + width + width;
+}
+
+perimeterBox(10,12);
+
+
+
 
 
 
