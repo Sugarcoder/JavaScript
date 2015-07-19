@@ -64,6 +64,50 @@ perimeterBox(10,12);
 
 
 
+--------Global vs. Local Variables--------
+
+
+GLOBAL VARIABLE = variables defined outside a function are accessible anywhere.
+
+
+Ex: 
+
+var globalVar = "hello";
+
+var foo = function() {
+	console.log(globalVar);
+}
+
+
+
+LOCAL VARIABLE = variables defined inside a function are local, and only accessible inside the function.
+
+Ex: 
+
+var bar = function() {
+	var localVar = "howdy";
+}
+
+console.log(localVar);    // This will produce an error
+
+
+
+Example (Inside vs Outside the function):
+
+var my_number = 7; //this has global scope
+
+var timesTwo = function(number) {
+    var my_number = number * 2;      // This is only accessible inside the function.
+    console.log("Inside the function my_number is: ");
+    console.log(my_number);
+}; 
+
+timesTwo(7);
+
+
+console.log("Outside the function my_number is: ")
+console.log(my_number);
+
 
 
 
