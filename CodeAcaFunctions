@@ -112,7 +112,13 @@ console.log(my_number);
 
 Practice: 
 
-var nameString = function ( ) {
-    
-    
+var nameString = function (name) {
+    return "Hi, I am" + " " + name;
 };
+
+nameString("Susie");
+
+
+console.log(name);
+
+
