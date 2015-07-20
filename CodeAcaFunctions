@@ -110,4 +110,9 @@ console.log(my_number);
 
 
 
+Practice: 
 
+var nameString = function ( ) {
+    
+    
+};
