@@ -1,0 +1,59 @@
+// This for loop will increment by 1. 
+
+for (var i = 5; i < 11; i++) {
+	console.log(i);
+}
+
+
+
+// This for loop will increment by 5.
+
+for (var i = 5; i < 51; i += 5) {
+	console.log(i);
+}
+
+
+
+// This for loop will decrement by 1.
+
+for (var i = 10; i >= 0; i--) {
+	console.log(i);
+}
+
+
+
+// This for loop will decrement by 5. 
+
+for (var i = 100; i >= 1; i -= 5) {
+	console.log(i);
+}
+
+
+
+
+// Arrays store lists of data.
+
+var junk = ["old work", "stuffed toys", 5, 8];
+
+
+
+
+// This will print out the 4th item on the list. 
+
+var junkData = ["Eddie Murphy", 49, "peanuts", 31];
+
+console.log(junkData[3]);
+
+
+
+
+// Using array and for loop together. 
+
+var cities = ["Melbourne", "Amman", "Helsinki", "NYC", "San Francisco"];
+
+for (var i = 0; i < cities.length; i++) {
+    console.log("I would like to visit " + cities[i]);
+}
+
+
+
