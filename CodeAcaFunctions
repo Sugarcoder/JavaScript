@@ -123,11 +123,14 @@ console.log(name);
 
 
 
+
 ----------ROCKS, PAPER, SCISSORS GAME----------
+
 
 var userChoice = prompt("Do you choose rock, paper or scissors?");
 
 var computerChoice = Math.random();
+
 
 if (computerChoice < 0.34) {
     computerChoice = "rock";
@@ -140,7 +143,8 @@ if (computerChoice < 0.34) {
 console.log("Computer: " + computerChoice);
 
 
-var compare = function(userChoice, computerChoice) {
+
+var result = function(userChoice, computerChoice) {
     if (userChoice === computerChoice) {
         return "The result is a tie!";
     } else if (userChoice === "rock") {
@@ -157,4 +161,5 @@ var compare = function(userChoice, computerChoice) {
 
 };
 
-console.log(compare);
+
+console.log(result(userChoice, computerChoice));
