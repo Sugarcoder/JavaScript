@@ -30,11 +30,9 @@ for (var i = 100; i >= 1; i -= 5) {
 
 
 
-
 // Arrays store lists of data.
 
 var junk = ["old work", "stuffed toys", 5, 8];
-
 
 
 
@@ -57,3 +55,30 @@ for (var i = 0; i < cities.length; i++) {
 
 
 
+--------FOR LOOP EXERCISE--------
+
+
+var text = "Emily, how are you \ doing? My name is Emily.";
+
+var myName = "Emily";
+
+var hits = [];
+
+
+// Arrays work on Strings too. 
+// Example: varMyName = 'Eric';   myName[0];   Answer is 'E'
+
+
+for (var i = 0; i < text.length; i++) {
+    if (text[i] === 'E') {
+        for(var j = i; j < (myName.length + i); j++) {
+			hits.push(text[j]);
+        }
+    }
+}
+
+if (hits.length === 0) {
+	console.log("Your name wasn't found!");
+} else {
+	console.log(hits);
+}
