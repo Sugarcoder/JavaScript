@@ -9,3 +9,73 @@ while(coinFace === 0){
 console.log("Tails! Done flipping.");
 
 
+
+// Exercise: 
+
+var understand = true;
+
+while(understand === 0){
+	console.log("I'm learning while loops!");
+	understand = false;
+} 
+console.log ("I'm learning while loops!");
+
+
+
+
+// 1 means false, 0 means true 
+
+// 'bool' is the same thing as 'bool === 0'
+
+var bool = 1;      
+
+while(bool){     
+    console.log("Less is more!");
+    bool = false;
+}
+
+
+
+// While loop with adding loops exercise ('Practice makes perfect')
+
+
+var count = 0;
+ 
+
+var loop = function(){
+    
+	while(count < 3){
+		console.log("I'm looping!"); 
+		count++;
+	}
+	
+};
+
+loop();
+
+
+// This exercise only loops once. 
+
+
+var cupcake = true; 
+
+var soloLoop = function(){
+  //Your code goes here!
+  while(cupcake === true) {
+      console.log("Looped once!");
+      cupcake = false;
+  } 
+  
+};
+
+soloLoop();
+
+
+
+// 'For' loop = Good for when you know ahead of time how many times you'll need to loop. 
+
+/ 'While' loop = When you know you have to loop, but don't know how many times. 
+
+ 
+
+
