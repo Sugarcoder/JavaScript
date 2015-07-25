@@ -79,3 +79,36 @@ soloLoop();
  
 
 
+
+// Random exercises to test my knowledge.
+
+
+// For loop
+
+for (var cake = 2; cake >= 0; cake--) {
+	console.log(cake);
+}
+
+
+
+// While loop 
+
+var cake = true; 
+
+while(cake === 0) {
+    console.log("I ate a slice of cake");
+    var cake = false;
+}
+console.log("Stop eating");
+
+
+
+// Do While loop
+
+var sweet = false;
+
+do {
+    console.log("I ate a very sweet cupcake");
+} while (sweet);
+
+
