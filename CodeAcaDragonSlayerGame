@@ -1,0 +1,24 @@
+--------Dragon Slayer Mini Game--------
+
+var slaying = true;
+var youHit = Math.floor(Math.random() * 2);
+var damageThisRound = Math.floor(Math.round() * 5 + 1);
+var totalDamage = 0;
+
+while(slaying) {
+    slaying = false;
+    totalDamage += damageThisRound;
+    
+    if(youHit = 1) {
+        console.log("You hit the dragon!")
+    } else {
+        console.log("The dragon defeated you.")
+    }
+        if (totalDamage >= 4) {
+            youHit = Math.floor(Math.random() * 2);
+            console.log("You win!");
+        } else {
+            console.log("You lose.");
+        }
+}
+
