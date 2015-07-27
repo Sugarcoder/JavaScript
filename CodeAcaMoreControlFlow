@@ -30,3 +30,70 @@ var isEven = function(number) {
 isEven("candy");
 
 
+
+--------Switch Statements (cases)--------
+
+// If you have a lot of options, it is better to use a 'Switch' statement instead of 'else if'.
+
+
+// Switch allows you to preset a number of options (called cases) that check to see if an expression matches any of them.
+
+1st Example: 
+
+var candy = prompt("What's your favorite candy?","Type your favorite candy here.");
+
+
+switch(candy) {
+  case 'licorice':
+    console.log("Gross!");
+    break;
+  case 'gum':
+    console.log("I like gum!");
+    break;
+  case 'beets':
+    console.log("...is that even a candy?");
+    break;
+  default:
+    console.log("I don't know what " + candy + " is.")
+  
+}
+
+
+
+// 2nd Example: 
+
+var iLoveJavaScript = true;
+var iLoveLearning = true;
+
+if (iLoveJavaScript && iLoveLearning) {
+  console.log("Awesome! Let's keep learning!");
+} else if(!(iLoveJavaScript || iLoveLearning)) {
+  console.log("Let's see if we can change your mind.");
+} else {
+  console.log("You only like one but not the other? We'll work on it.");
+}
+
+
+
+--------OR Statements--------
+
+// Example: 
+
+var tired = true;
+var bored = false;
+
+
+var nap = function() {
+  if (tired || bored) {
+      return true;
+  } else {
+      return false;
+  }
+  
+};
+
+nap();
+
+
+
+

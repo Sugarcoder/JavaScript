@@ -1,0 +1,39 @@
+--------Choose Your Own Adventure 2--------
+
+var user = prompt("You are walking in the forest and come across a bridge. There is a troll underneath the bridge. Do you PAY, FIGHT or RUN?").toUpperCase();
+
+var creditCard = true;
+
+var mph20 = "20 mph";
+
+var mph50 = "50 mph";
+
+switch(user) {
+    case 'PAY': 
+        prompt("How would you like to pay, credit card or troll dollars?");
+        if (creditCard) {
+            console.log("The troll only takes troll dollars. Sadly, he defeats you.");
+        } else {
+            console.log("You may pass."); 
+        }
+        break;
+    case 'FIGHT':
+        console.log("You fight the troll and barely survived. You make it to the other side of the bridge!");
+        break;
+    case 'RUN':
+        prompt("How fast are you running, 20 mph or 50 mph?");
+        if (mph20 || mph50) {
+            console.log("You ran fast enough. You escaped from the troll and made it to the other side!");
+        } else if (mph20 && mph50) {
+            console.log ("You can;t run both speeds! The troll will catch up to you!");
+        } else {
+          console.log("The troll outruns you, and defeats you.");
+        }
+        break;
+    default: 
+        console.log("Sorry, I don't understand your answer.");
+        break;
+}
+
+
+
