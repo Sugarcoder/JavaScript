@@ -1,0 +1,84 @@
+--------Objects--------
+
+- An object is like an array, except its keys can be variables and strings, not just numbers. 
+
+Example: 
+
+key: 'name', value: 'John Smith'
+
+
+
+- Objects are just collections of information (keys and values) between curly braces.
+
+Example: 
+
+var myObject = {
+	key: value;
+	key: value; 
+	key: value;
+}
+
+
+
+- There are 2 ways to create an object: "Object Literal Notation" and "Object Constructor".
+
+
+- Object Literal Notation: 
+
+
+var myObj = {
+	type: 'fancy',
+	disposition: 'sunny'
+};
+
+var emptyObj = {};
+
+
+
+- Object Constructor: 
+
+var myObj = new Object();
+
+// This tells JavaScript, "I want you to make me a new thing, and I want that thing to be an object."
+
+
+- After you created an Object, you can add keys to it in 2 ways: 
+
+
+myObj["name"] = "Charlie";
+
+OR
+
+myObj.name = "Charlie";
+
+
+
+Examples: 
+
+var me = new Object();
+
+me.name = "Sugarcoder";
+me.age = 22;
+
+
+--------
+
+
+var object1 = new Object();
+var object2 = new Object();
+var object3 = new Object();
+
+object1.candy = "bubble gum";
+object2.candy = "gummy bears";
+object3.candy = "chocolate";
+
+
+--------
+
+
+var candy = new Object();
+
+var myArray = [1, true, "apple", candy];
+
+
+
