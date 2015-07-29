@@ -1,0 +1,190 @@
+--------Objects 1--------
+
+
+// Example "FizzBuzz":
+
+for (i = 1; i <= 20; i++) {
+
+if (i % 3 === 0 && i % 5 !== 0) {
+    console.log("Fizz");
+} else if (i % 5 === 0 && i % 3 !== 0){
+    console.log("Buzz");
+} else if (i % 3 === 0 && i % 5 === 0) {
+    console.log("FizzBuzz");
+} else {
+    console.log(i);
+}
+}
+
+
+
+
+// Example: "I have to celebrate your baby"
+
+
+
+var ask = prompt("What movie review?");
+
+var getReview = function (movie) {
+    
+switch(movie) {
+    case "Toy Story 2":
+        return ("Great story. Mean prospector.");
+        break;
+    case "Finding Nemo":
+        return ("Cool animation, and funny turtles.");
+        break;
+    case "The Lion King":
+        return ("Great songs.");
+        break;
+
+    default:
+    return ("The movie is not found.");
+}    
+
+};
+
+getReview(ask);
+
+
+
+
+// Objects usually start with 'var', and has brackets.
+
+
+// Each piece of info included in an object is known as a "property" (like a category label).
+
+
+// Each property has a name, followed by its "value" (age: 21).
+
+
+// You can use the dot notation to separate the object and property, or use bracket notation (ObjectName["PropertyName"]).
+
+Example: var species = dog["species"];
+
+
+
+
+// Another way of creating objects without using curly brackets is using the keyword "new". 
+
+// This is known as creating a object using a constructor. 
+
+Example:
+
+var susan2 = new Object();
+    susan2.name = "Susan Jordan";
+    susan2.age = 21;
+
+
+
+
+--------METHODS--------
+
+// Methods are similar to functions. 
+
+// A method is like a function associated with an object. 
+
+objectName.methodName()
+
+
+
+// Functions can only use parameters as an input, but methods can make calculations with object properties. 
+
+
+// Example: 
+
+
+var bob = new Object();
+bob.age = 17;
+
+bob.setAge = function (newAge){
+  bob.age = newAge;
+};
+
+bob.getYearOfBirth = function () {
+  return 2014 - bob.age;
+};
+
+console.log(bob.getYearOfBirth());
+
+
+
+
+----------THIS keyword----------
+
+// We can make a method work for many objects using the 'this' keyword. 
+
+
+// 'This' acts as a placeholder, and will refer to whichever object called that method when the method is actually used. 
+
+
+// Method Example 1: 
+
+
+var setAge = function (newAge) {
+  this.age = newAge;
+};
+
+var bob = new Object();
+bob.age = 30;
+
+bob.setAge = setAge;
+  
+bob.setAge(50);
+
+
+
+
+
+// Method Example 2: 
+
+
+var rectangle = new Object();
+rectangle.height = 3;
+rectangle.width = 4;
+
+rectangle.setHeight = function (newHeight) {
+  this.height = newHeight;
+};
+
+rectangle.setWidth = function (newWidth) {
+    this.width = newWidth;
+}
+  
+rectangle.setWidth(8);
+rectangle.setHeight(6);
+
+
+
+
+--------CONSTRUCTORS--------
+
+// A 'constructor' is a way to create an object. 
+
+// You can make your own constructors, instead of always use the same one (like Object()).
+// That way, you can set the properties for an object right when it is created.
+ 
+
+// If you don't add the property in the parameter, that property will always remain the same. 
+
+
+Example: 
+
+
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+  this.species = "Homo Sapiens";
+}
+
+
+
+
+// Constructors can also define methods in addition to setting properties. 
+
+
+
+
+
+
+
