@@ -83,6 +83,8 @@ var susan2 = new Object();
 // Methods are similar to functions. 
 
 // A method is like a function associated with an object. 
+// Methods are helpful when you want to update the object's properties or calculate something based on an object's properties. 
+
 
 objectName.methodName()
 
@@ -135,7 +137,6 @@ bob.setAge(50);
 
 
 
-
 // Method Example 2: 
 
 
@@ -179,12 +180,150 @@ function Person(name,age) {
 
 
 
-
 // Constructors can also define methods in addition to setting properties. 
 
 
+Example 1: 
+
+
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+  this.species = "Homo Sapiens";
+}
+
+
+var sally = new Person("Sally Bowles", 39);
+var holden = new Person("Holden Caulfield", 16);
+
+console.log("sally's species is " + sally.species + " and she is " + sally.age);
+console.log("holden's species is " + holden.species + " and he is " + holden.age);
 
 
 
+Example 2: 
+
+
+function Rectangle(height, width) {
+  this.height = height;
+  this.width = width;
+  this.calcArea = function() {
+      return this.height * this.width;
+  };
+  
+  this.calcPerimeter = function() {
+      return 2 * (this.height + this.width);
+  };
+}
+
+var rex = new Rectangle(7,3);
+var area = rex.calcArea();
+var perimeter = rex.calcPerimeter();
+
+
+
+// An object can make arrays of numbers and strings. 
+
+Example: 
+
+
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+
+var family = new Array();
+family[0] = new Person("alice", 40);
+family[1] = new Person("bob", 42);
+family[2] = new Person("michelle", 8);
+family[3] = new Person("timmy", 6);
+
+
+
+// Arrays filled with objects will work just like arrays filled with numbers and strings. 
+
+
+
+// Example 3:
+
+
+// Person constructor
+
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// Now we can make an array of people
+
+var family = [];
+
+family[0] = new Person("alice", 40);
+family[1] = new Person("bob", 42);
+family[2] = new Person("michelle", 8);
+family[3] = new Person("timmy", 6);
+
+// loop through FOR array
+
+for (var i = 0; i < family.length; i++) {
+    console.log(family[i].name);
+} 
+
+
+
+
+// You can use objects as parameters for functions as well. 
+
+// person1 and person2 are objects.
+
+var ageDifference = function(person1, person2) {
+    return person1.age - person2.age;
+}
+
+
+Example: 
+
+
+// Person constructor
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+
+// This function computes the difference in ages between two people.
+
+var ageDifference = function(person1, person2) {
+    return person1.age - person2.age;
+};
+
+
+// This function returns the age of the older person. 
+
+var olderAge = function(person1, person2) {
+    if (person1.age > person2.age) {
+        return person1.age;
+    } else {
+        return person2.age;
+    }
+}
+
+
+var alice = new Person("Alice", 30);
+var billy = new Person("Billy", 25);
+
+console.log("The older person is " + olderAge(alice, billy));
+
+
+
+
+--------PROPERTIES--------
+
+// Properties are like variables that belong to an object, and used to hold pieces of info. There are two ways to code it: 
+
+1. Dot notation (ObjectName.PropertyName)
+
+2. Bracket notation (ObjectName["PropertyName"])
 
 
