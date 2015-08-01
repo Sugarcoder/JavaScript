@@ -1,0 +1,201 @@
+----------OBJECTS 2----------
+
+
+--------Methods--------
+
+// We can also add methods to objects in literal notation. 
+
+Example: 
+
+var someObj = {
+	aProperty: value,
+	someMethod: function(some, params) {
+
+	}
+};
+
+
+
+// Methods defined in both constructors and literal notation can take parameters, just like normal functions. 
+
+
+Example: 
+
+
+var james = {
+    job: "programmer",
+    married: false,
+    speak: function(mood) {
+       console.log("Hello, I am feeling " + mood);
+    }
+};
+
+james.speak("great");
+james.speak("just okay");
+
+
+
+
+// There are 2 ways to get property values: 
+
+1. Dot notation 
+someObj.propName;
+
+2. Bracket notation
+someObj["propName"];
+
+
+// And advantage of bracket notation is that we are not restricted to just using strings in the brackets. We can also use variables whose values are property names. 
+
+var someObj = {propName: someValue};
+var myProperty = "propName";
+someObj[myProperty];
+
+
+// Example: 
+
+var james = {
+    job: "programmer",
+    married: false
+};
+
+var aProperty = "job";
+
+console.log (james[aProperty]);
+
+
+
+// hasOwnProperty is to check whether or not an object has something. 
+
+// Example:
+
+
+var suitcase = {
+    shirt: "Hawaiian"
+};
+
+if (suitcase.hasOwnProperty('shorts')) {
+    console.log(suitecase.shorts);
+} else {
+    suitcase.shorts = "red";
+    console.log(suitcase.shorts);
+};
+
+
+
+// To print out all elements in an object, you can use 'for/in' loop. 
+
+for(var property in dog) {
+	console.log(property);
+}
+
+
+
+// Example:
+
+
+var nyc = {
+    fullName: "New York City",
+    mayor: "Bill de Blasio",
+    population: 8000000,
+    boroughs: 5
+};
+
+for(var x in nyc) {
+    console.log(nyc[x]);
+    
+}
+
+
+--------Class--------
+
+// A 'Class' is like a type, or a category of objects.
+ 
+
+
+// 'prototype' teaches all of the objects the new method.
+
+// Example: 
+
+function Dog (breed) {
+  this.breed = breed;
+};
+
+var buddy = new Dog("golden Retriever");
+Dog.prototype.bark = function() {
+  console.log("Woof");
+};
+buddy.bark();
+
+var snoopy = new Dog("Beagle");
+snoopy.bark();
+
+
+// All of the dogs will bark. 
+
+
+
+--------Inheritance--------
+
+// Inheritance allows one class to see and use the methods and properties of another class.
+
+
+
+// Example (Method Refresher): 
+
+
+function Animal(name, numLegs) {
+    this.name = name;
+    this.numLegs = numLegs;
+};
+
+Animal.prototype.sayName = function(Animal) {
+    console.log('Hi my name is ' + this.name);
+}
+
+var penguin = new Animal("Captain Cook", 2);
+penguin.sayName();
+
+
+
+
+// Example (Inheritance with method):
+
+
+function Animal(name, numLegs) {
+    this.name = name;
+    this.numLegs = numLegs;
+}
+
+Animal.prototype.sayName = function() {
+    console.log("Hi my name is " + this.name);
+};
+
+
+var Penguin = function(name, numLegs) {
+    this.name = name;
+    this.numLegs = numLegs;
+}
+
+
+Penguin.prototype.sayName = function(Animal) {
+    console.log('Hi my name is ' + this.name);
+}
+
+var theCaptain = new Penguin("Captain Cook", 2);
+theCaptain.sayName();
+
+
+
+
+// Whenever 'X is a Y' relationship exist, we should use Inheritance. 
+
+
+
+
+
+
+
+
+
+
