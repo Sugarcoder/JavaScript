@@ -1,7 +1,6 @@
-----------OBJECTS 2----------
-
 
 --------Methods--------
+
 
 // We can also add methods to objects in literal notation. 
 
@@ -83,9 +82,9 @@ if (suitcase.hasOwnProperty('shorts')) {
 
 
 
-// To print out all elements in an object, you can use 'for/in' loop. 
+// To print out all elements in an object, you can use 'for-in' loop. 
 
-for(var property in dog) {
+for(var 'property' in 'dog') {
 	console.log(property);
 }
 
@@ -107,7 +106,9 @@ for(var x in nyc) {
 }
 
 
+
 --------Class--------
+
 
 // A 'Class' is like a type, or a category of objects.
  
@@ -135,9 +136,12 @@ snoopy.bark();
 
 
 
+
 --------Inheritance--------
 
+
 // Inheritance allows one class to see and use the methods and properties of another class.
+
 
 
 
@@ -172,7 +176,7 @@ Animal.prototype.sayName = function() {
 };
 
 
-var Penguin = function(name, numLegs) {
+Penguin = function(name, numLegs) {
     this.name = name;
     this.numLegs = numLegs;
 }
@@ -193,6 +197,131 @@ theCaptain.sayName();
 
 
 
+// Example of a class inheriting properties: 
+
+
+function Penguin(name) {
+    this.name = name;
+    this.numLegs = 2;
+}
+
+
+function Emperor(name) {
+    this.name = name;
+}
+
+
+Emperor.prototype = new Penguin ("Brad");
+console.log(Emperor.prototype.numLegs);
+
+
+
+// By default, all classes inherit directly from the Object, unless we change the class' prototype. 
+
+
+
+
+// Example (Inheritance using 'Object.prototype'):
+
+
+// original classes
+
+function Animal(name, numLegs) {
+    this.name = name;
+    this.numLegs = numLegs;
+    this.isAlive = true;
+}
+
+function Penguin(name) {
+    this.name = name;
+    this.numLegs = 2;
+}
+
+function Emperor(name) {
+    this.name = name;
+    this.saying = "Waddle waddle";
+}
+
+
+// set up the prototype chain
+
+Penguin.prototype = new Animal();
+Emperor.prototype = new Penguin();
+
+var myEmperor = new Emperor("Jules");
+
+console.log( myEmperor.saying ); // should print "Waddle waddle"
+console.log( myEmperor.numLegs ); // should print 2
+console.log( myEmperor.isAlive ); // should print true
+
+
+
+--------Public vs. Private Variables-------
+
+
+// Public variables can be accessed from anywhere.
+
+// Private variables are not publicly shared, and can only be accessed from within the class.
+
+
+// Even though we cannot directly access private variables from outside the class, we can define a public method that returns the value of a private variable. 
+
+
+
+// Example: 
+
+
+function Person(first,last,age) {
+   this.firstname = first;
+   this.lastname = last;
+   this.age = age;
+   var bankBalance = 7500;
+  
+   this.getBalance = function() {
+      return bankBalance;
+   };
+}
+
+var john = new Person('John','Smith',30);
+console.log(john.bankBalance);
+
+// create a new variable myBalance that calls getBalance()
+
+var myBalance = john.getBalance();
+
+
+console.log(myBalance);
+
+
+
+
+// Methods can also be private within a class and inaccessible outside of the class. (ex: Change 'this.returnBalance' to 'var returnBalance')
+
+
+
+
+--------Typeof (and 'for-in' Review)--------
+
+
+// You can figure out the type of variable by using 'typeof myVariable;'
+
+
+// Example: 
+
+
+var languages = {
+    english: "Hello!",
+    french: "Bonjour!",
+    notALanguage: 4,
+    spanish: "Hola!"
+};
+
+
+for (var x in languages) {
+    if (typeof languages[x] === "string") {
+        console.log(languages[x]);
+    }
+}
 
 
 
