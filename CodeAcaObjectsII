@@ -4,7 +4,7 @@
 
 // We can also add methods to objects in literal notation. 
 
-Example: 
+Example (methods defined in literal notation): 
 
 var someObj = {
 	aProperty: value,
@@ -18,7 +18,7 @@ var someObj = {
 // Methods defined in both constructors and literal notation can take parameters, just like normal functions. 
 
 
-Example: 
+Example (methods defined in constructors): 
 
 
 var james = {

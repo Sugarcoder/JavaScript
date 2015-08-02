@@ -80,6 +80,7 @@ var susan2 = new Object();
 
 --------METHODS--------
 
+
 // Methods are similar to functions. 
 
 // A method is like a function associated with an object. 
